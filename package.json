@@ -1,0 +1,20 @@
+{
+  "name": "sprint-6-pb-aws-univesp",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp/issues"
+  },
+  "homepage": "https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp#readme"
+}
