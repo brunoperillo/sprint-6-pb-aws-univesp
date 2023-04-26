@@ -45,3 +45,9 @@ Desenvolver um sistema para indexação de mensagens de áudio com ferramentas A
   * 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
 * O prazo de entrega é até às 12h do dia 02/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp)).
 
+## Desenvolvedores do projeto
+
+| [<img src="https://avatars.githubusercontent.com/u/81330043?v=4" width=115><br><sub>Bernardo Lima</sub>](https://github.com/belima93)| [<img src="https://avatars.githubusercontent.com/u/96358027?v=4"  width=115><br><sub>Diego</sub>](https://github.com/Diegox0301)
+| [<img src="https://avatars.githubusercontent.com/u/124359272?v=4" width=115><br><sub>Irati Gonçalves Maffra</sub>](https://github.com/IratiMaffra)
+| [<img src="https://avatars.githubusercontent.com/u/88354075?v=4" width=115><br><sub>Kelly Silva</sub>](https://github.com/KellyPLSilva) | [<img src="https://avatars.githubusercontent.com/u/117780664?v=4" width=115><br><sub>Viviane Alves</sub>](https://github.com/Vivianes86) |
+| :---: | :---: | :---: |:---: |:---: |
