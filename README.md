@@ -8,12 +8,6 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 Desenvolver um sistema para indexação de mensagens de áudio com ferramentas AWS.
 
-**Especificações**:
-
-* Ler o tutorial apresentado aqui: <https://aws.amazon.com/pt/blogs/aws-brasil/indexando-audios-com-amazon-transcribe-amazon-comprehend-e-elasticsearch/>.
-* Seguir os passos e realizar o deploy da ferramenta, adaptando, atualizando e configurando o que se fizer necessário.
-* Criar uma interface online para captar ou subir áudio (por exemplo: <https://aws.amazon.com/pt/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/>).
-
 ***
 ## Introdução
 
@@ -48,6 +42,11 @@ Arquivos suportados
 Possui suporte para 37 idiomas. 
 
 *imagem em desenvolvimento*
+
+
+
+
+
 
 
 
