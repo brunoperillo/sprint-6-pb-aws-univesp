@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto Sprint 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vue@1.0.28/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios@0.2.1/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>S3 Uploader Test</h1>
+
+        <!-- Check if audio file is not selected -->
+        <div v-if="!audio">
+            <h2>Select an audio file</h2>
+
+            <!-- Create an input field to select audio file -->
+            <input type="file" @change="onFileChange" accept="audio/mpeg">
+        </div>
+
+        <!-- Otherwise, display the selected audio file and buttons to remove or upload it -->
+        <div v-else>
+            <audio :src="audio" controls></audio>
+            <button v-if="!uploadURL" @click="removeAudio">Remove audio</button>
+            <button v-if="!uploadURL" @click="uploadAudio">Upload audio</button>
+        </div>
+
+        <!-- Display success message if upload was successful -->
+        <h2 v-if="uploadURL">Success! Audio uploaded to bucket.</h2>
+    </div>
+
+</body>
+</html>
