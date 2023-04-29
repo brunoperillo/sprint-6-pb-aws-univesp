@@ -3,14 +3,22 @@
 Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
 ***
+<h1 align="center">
+📄<br>
+</h1>
 
-## Execução (Código Fonte)
+<h1 align="center">
+  <img src="gitimagem.png">
+</h1>
+
+
+## Introdução
+
+## Objetivo
 
 Desenvolver um sistema para indexação de mensagens de áudio com ferramentas AWS.
 
 ***
-## Introdução
-
 
 ## Escopo
 
@@ -20,7 +28,7 @@ Desenvolver um sistema para indexação de mensagens de áudio com ferramentas A
 Com o ASR, a tecnologia de voz pode detectar sons falados e reconhcê-los como palavras. Permitindo que os computadores finalmente nos entendam por meio de nossa forma mais natural de comunicação: a fala.
 Os computadores podem detectar padrões em formas de onda de áudio, combiná-los com os sons de um determinado idioma e quais palavras falamos. 
 
-* imagem em desenvolvimento*
+*imagem em desenvolvimento*
 
 * O Amazon Transcribe
 
@@ -52,34 +60,11 @@ Possui suporte para 37 idiomas.
 
 
 
-## O que será avaliado?
-
-* Projeto em produção na AWS
-* Arquivos de configuração utilizados
-* Código adicional desenvolvido e atualizado
-* Forma de publicação de códigos no git ao longo do desenvolvimento
-* Organização geral do código fonte
-  * Estrutura de pastas
-  * Estrutura da lógica de negócio
-  * Divisão de responsabilidades em arquivos/pastas distintos
-  * Otimização do código fonte (evitar duplicações de código)
-* Objetividade do README.md
-* Modelo de organização da equipe para o desenvolvimento do projeto
+## Referências
 
 ***
 
-## Entrega
 
-* Aceitar o convite do repositório da sprint-6-pb-aws-univesp
-* **O trabalho deve ser feito em grupos de três ou quatro pessoas**
-  * Evitar formação de grupos já criados em sprints anteriores
-* Criar um branch no repositório com o formato grupo-número (Exemplo: grupo-1)
-* Subir o trabalho no branch com um README.md
-  * documentar detalhes sobre como a avaliação foi desenvolvida
-  * dificuldades conhecidas
-  * como utilizar o sistema
-  * 🔨 código fonte desenvolvido (Sugestão: pasta `src`)
-* O prazo de entrega é até às 12h do dia 02/05/2023 no repositório do github ([https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp](https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp)).
 
 ## Desenvolvedores do projeto
 

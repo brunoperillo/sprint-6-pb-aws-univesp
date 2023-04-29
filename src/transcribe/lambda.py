@@ -1,3 +1,5 @@
+import boto3
+import uuid
 import json
 
 def lambda_handler(event, context):
@@ -11,11 +13,11 @@ def lambda_handler(event, context):
     s3bucket = record['s3']['bucket']['name'] 
     s3object = record['s3']['object']['key'] 
     
-    # Arquivo para ser processado
+    # arquivo para ser processado
 
     s3Path = "s3://" + s3bucket + "/" + s3object 
 
-    # Caminho para localizar o arquivo dentro do bucket de entrada
+    # caminho para localizar o arquivo dentro do bucket de entrada
 
     jobName = s3object + '-' + str(uuid.uuid4()) # cria novo nome único para o job
 
@@ -29,7 +31,7 @@ def lambda_handler(event, context):
         Media={
             'MediaFileUri': s3Path 
         },
-        OutputBucketName = "<seu_bucket_de_saida>" # bucket de saída para receber o arquivo JSON com a transacrição
+        OutputBucketName = "<transcribe-output-02>" # bucket de saída para receber o arquivo JSON com a transacrição
     )
 
 
