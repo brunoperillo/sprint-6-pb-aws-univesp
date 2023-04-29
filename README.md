@@ -12,7 +12,7 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 </h1>
 
 
-## Introdução
+## Descrição do projeto
 
 ## Objetivo
 
@@ -51,6 +51,13 @@ Possui suporte para 37 idiomas.
 
 *imagem em desenvolvimento*
 
+## Funcionalidades
+
+
+## Como os usuários podem utilizá-lo
+
+
+## Onde os usuários podem encontrar ajuda sobre seu projeto
 
 
 
