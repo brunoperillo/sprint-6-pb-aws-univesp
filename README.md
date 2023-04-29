@@ -54,12 +54,8 @@ Possui suporte para 37 idiomas.
 ## Funcionalidades
 
 
-## Como os usuários podem utilizá-lo
-
-
-## Onde os usuários podem encontrar ajuda sobre seu projeto
-
-
+## Como os usuários podem utilizá-l
+## Dificuldades 
 
 
 
