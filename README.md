@@ -54,7 +54,7 @@ Possui suporte para 37 idiomas.
 ## Funcionalidades
 
 
-## Como os usuários podem utilizá-l
+## Como os usuários podem utilizá
 ## Dificuldades 
 
 
