@@ -1,0 +1,9 @@
+version = 0.1
+[default.deploy.parameters]
+stack_name = "Project-group3-sprint-06"
+resolve_s3 = true
+s3_prefix = "Project-group3-sprint-06"
+region = "us-east-1"
+capabilities = "CAPABILITY_IAM"
+parameter_overrides = "ElasticsearchDomainName=\"voicelanguagept\" SourceAudioLanguage=\"pt-BR\""
+image_repositories = []
