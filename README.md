@@ -4,11 +4,11 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 ***
 <h1 align="center">
-📄<br>
+<br>
 </h1>
 
 <h1 align="center">
-  <img src="gitimagem.png">
+  <img src="gitimagem.jpg">
 </h1>
 
 
@@ -28,7 +28,7 @@ Desenvolver um sistema para indexação de mensagens de áudio com ferramentas A
 Com o ASR, a tecnologia de voz pode detectar sons falados e reconhcê-los como palavras. Permitindo que os computadores finalmente nos entendam por meio de nossa forma mais natural de comunicação: a fala.
 Os computadores podem detectar padrões em formas de onda de áudio, combiná-los com os sons de um determinado idioma e quais palavras falamos. 
 
-*imagem em desenvolvimento*
+* imagem em desenvolvimento*
 
 * O Amazon Transcribe
 
