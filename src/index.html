@@ -20,7 +20,8 @@
         <div class="card">
           <div class="card-body">
             <h2>Insira um aúdio em formato .MP3:</h2>
-            <input type="file" @change="onFileChange" accept="audio/mpeg"/>
+            <label for="audio"/>
+            <input type="file" @change="onFileChange" accept="audio/mpeg" name="audio"/>
             <div v-else>
               <!-- <img :src="image" /> -->
               <div v-else class="pt-4">
