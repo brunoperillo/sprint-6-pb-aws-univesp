@@ -10,12 +10,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    
     <div id="app">
-      <nav>
-        <h2>
-          Sistema para indexação de mensagens de áudio
-        </h2>
+      <nav class="navbar">
+        <div class="container">
+        <h2 class="title">Sistema para indexação de mensagens de áudio </h2>
+        <a class="navbar-brand" href="#">
+          <img src="/files/img/compass-uol.svg" alt="Logo" height="20" class="d-inline-block align-text-right">
+        </a>
+      </div>
       </nav>
+
       <div v-if="!image" class="container w-50 p-5">
         <div class="card">
           <div class="card-body">
@@ -39,6 +44,7 @@
       </div>
       <h2 v-if="uploadURL" class="text-center">Sucesso ao enviar arquivo para o bucket.</h2>
     </div>
+
     <footer>
           <p>© 2023 - Todos os direitos reservados à
             <a href="https://github.com/crobertocamilo">Carlos Roberto</a>,
@@ -47,6 +53,7 @@
             <a href="https://github.com/odharamaggi">O'Dhara Maggi</a>.
         </p>
     </footer>
+
     <script>
       //upload script
       const MAX_AUDIO_SIZE = 1000000;
