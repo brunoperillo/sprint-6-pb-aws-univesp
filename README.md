@@ -6,7 +6,7 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 <div align="center">
 
-![Sprint 6 - imagens do projeto](https://user-images.githubusercontent.com/124359272/235372538-8f726d84-da2b-40e9-914e-ae2f833d8906.png))
+![Sprint 6 - imagens do projeto](https://user-images.githubusercontent.com/124359272/235372538-8f726d84-da2b-40e9-914e-ae2f833d8906.png)
 
 </div>
 
@@ -53,7 +53,7 @@ Possui suporte para 37 idiomas.
 ## Funcionalidades
 
 
-## Como os usuários podem utilizá-l
+## Como os usuários podem utilizá-lo
 ## Dificuldades 
 
 
