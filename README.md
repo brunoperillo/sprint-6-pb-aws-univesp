@@ -97,7 +97,7 @@ Este deploy leva vários minutos. Ao fim da execução, anote os valores de outp
 Com a criação implementada na conta, podemos dar início ao workflow de transcrição. Para isto, basta abrir o arquivo `index.html` contido na pasta `src`.
 
 <div style="text-align:center;">
-  <img src="./src/img/webpage.PNG" alt="Frontend" style="max-width:80%;">
+  <img src="./src/img/webpage.png" alt="Frontend" style="max-width:80%;">
   <p>Frontend da aplicação de envio de áudios</p>
 </div>
 
