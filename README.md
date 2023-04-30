@@ -6,7 +6,7 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 <div align="center">
 
-![imagem-grupo3](https://user-images.githubusercontent.com/81330043/235319525-9d232a35-a369-411a-b36d-0278d57f84e8.png)
+![Sprint 6 - imagens do projeto](https://user-images.githubusercontent.com/124359272/235372538-8f726d84-da2b-40e9-914e-ae2f833d8906.png))
 
 </div>
 

@@ -3,37 +3,37 @@
   <head>
     <title>Upload file to S3</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-      <script src="https://unpkg.com/vue@1.0.28/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios@0.2.1/dist/axios.min.js"></script>
+    <script src="https://s3.console.aws.amazon.com/s3/buckets/bucket-audio-sprint-6?region=us-east-1&tab=objects"></script>
+    <script src="https://s3.console.aws.amazon.com/s3/buckets/bucket-texto-sprint-6-output?region=us-east-1&tab=objects"></script>
   </head>
+
   <body>
     <div id="app">
-      <h1>S3 Uploader Test</h1>
-  
+      <h1>Teste Carregamento Audio S3</h1>
       <div v-if="!audio">
-        <h2>Select an audio</h2>
+        <h2>Selecione o arquivo de audio</h2>
         <input type="file" @change="onFileChange" accept="audio/mp3">
       </div>
       <div v-else>
         <img :src="audio" />
-        <button v-if="!uploadURL" @click="removeAudio">Remove audio</button>
-        <button v-if="!uploadURL" @click="uploadAudio">Upload audio</button>
+        <button v-if="!uploadURL" @click="removeAudio">Remover</button>
+        <button v-if="!uploadURL" @click="uploadAudio">Carregar</button>
       </div>
-      <h2 v-if="uploadURL">Success! Audio uploaded to bucket.</h2>
+      <h2 v-if="uploadURL">Successo! Audio carregado para o bucket.</h2>
     </div>
-  
+
     <script>
       const MAX_AUDIO_SIZE = 1000000
 
       /* ENTER YOUR ENDPOINT HERE */
 
-      const API_ENDPOINT = '<< ENTER HERE >>' // e.g. https://ab1234ab123.execute-api.us-east-1.amazonaws.com/uploads
+      const API_ENDPOINT = 'https://s3.console.aws.amazon.com/s3/buckets/bucket-audio-sprint-6?region=us-east-1&tab=objects'  //e.g. 'https://s3..aws.amazon.com/s3/buckets/bucket-audio-sprint-6?region=us-east-1&tab=objects',
 
       new Vue({
-        el: "#app",
+        eval: "#app",
         data: {
           audio: '',
-          uploadURL: ''
+          uploadURL: ""
         },
         methods: {
           onFileChange (e) {
@@ -42,11 +42,13 @@
             this.createAudio(files[0])
           },
           createAudio (file) {
-            // var audio = new Audio()
+            var audio = new Audio()
             let reader = new FileReader()
             reader.onload = (e) => {
               console.log('length: ', e.target.result.includes('data:audio/mp3'))
-              if (!e.target.result.includes('data:audio/mp3')) {
+              if audio.type = MP3 (e.target.result.includes('data:audio/mp3')) {
+                //carregar arquivo
+                else
                 return alert('Wrong file type -  MP3 only.')
               }
               if (e.target.result.length > MAX_AUDIO_SIZE) {
@@ -74,15 +76,15 @@
             for (var i = 0; i < binary.length; i++) {
               array.push(binary.charCodeAt(i))
             }
-            let blobData = new Blob([new Uint8Array(array)], {type: 'audio/mp3'})
+            let uploadURL = new upload([new Uint8Array(array)], {type: 'audio/mp3'})
             console.log('Uploading to: ', response.uploadURL)
             const result = await fetch(response.uploadURL, {
-              method: 'PUT',
-              body: blobData
+              method: 'POST',
+              upload: API_ENDPOINT
             })
             console.log('Result: ', result)
             // Final URL for the user doesn't need the query string params
-            this.uploadURL = response.uploadURL.split('?')[0]
+            this.uploadURL = response.uploadURL.split('https://s3.console.aws.amazon.com/s3/buckets/bucket-audio-sprint-6?region=us-east-1&tab=objects')[0]
           }
         }
       })
