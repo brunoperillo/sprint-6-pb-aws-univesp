@@ -24,7 +24,7 @@ Desenvolver um sistema para indexação de mensagens de áudio com ferramentas A
 
 ## Descrição do projeto
 
-Esse projeto tem como referência o tutorial apresentado na [Sprint 6](https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp/tree/main), no qual seguimos os passos para realizando o deploy, adaptar e configurando os serviços Amazon S3, Lambda, Transcribe, Comprehend, Elasticsearch, Step Function e Cognito.
+Esse projeto tem como referência o tutorial apresentado na [Sprint 6](https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp/tree/main), no qual seguimos os passos para realizar o deploy, adaptar e configurar os serviços*Amazon S3, Lambda, Transcribe, Comprehend, Elasticsearch, Step Function e Cognito.*
 
 Para transcrever um arquivo de áudio, o grupo irá usar o Amazon Transcribe que utiliza três API's
 
@@ -36,7 +36,7 @@ Para transcrever um arquivo de áudio, o grupo irá usar o Amazon Transcribe que
 
 A resposta contém um link para um arquivo JSON contendo os resultados. 
 
-Nesse projeto fizemos alguns audios em mp3 no site [Tree TTS](https://freetts.com/) para testar e criar os arquivos json disponiveis na pasta transcribe. 
+Nesse projeto fizemos alguns áudios em mp3 no site [Tree TTS](https://freetts.com/) para testar e criar os arquivos json disponíveis na pasta transcribe. 
 
 * O que são ASR's ?
 
@@ -58,7 +58,7 @@ Os computadores podem detectar padrões em formas de onda de áudio, combiná-lo
 
 ## Organização da equipe para o desenvolvimento do projeto. 
 
-Fizemos reunião diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. 
+Fizemos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. 
 
 ## Dificuldades 
 
