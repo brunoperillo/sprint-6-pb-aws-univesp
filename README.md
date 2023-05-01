@@ -2,6 +2,7 @@
 
 Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
+
 ***
 
 <div align="center">
@@ -9,6 +10,8 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 ![Sprint 6 - imagens do projeto](https://user-images.githubusercontent.com/124359272/235372538-8f726d84-da2b-40e9-914e-ae2f833d8906.png)
 
 </div>
+
+## Introdução
 
 
 ## Descrição do projeto
@@ -53,7 +56,11 @@ Possui suporte para 37 idiomas.
 ## Funcionalidades
 
 
+<<<<<<< HEAD
 ## Como os usuários podem utilizá-lo
+=======
+## Como os usuários podem utilizá
+>>>>>>> 269f0fc88d70a82df3d442ebb7545bc6b8d6c25d
 ## Dificuldades 
 
 
