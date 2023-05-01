@@ -2,7 +2,7 @@
 
 Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/GRUPO_1.png" alt="Grupo 1" style="max-width:90%;">
 </div>
 
@@ -20,7 +20,7 @@ A proposta deste repositório é a criação de uma solução de ingestão e ind
 
 A solução segue a ideia de que, a partir do momento em que fazemos o upload de um arquivo `.mp3` para um BucketS3, o workflow se incia e realiza a transcrição e a análise de linguagem.
 Como resultado, esperamos criar índices e gráficos que suportem soluções de pesquisa para facilitar a análise dos dados.
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/indexaudios.jpg" alt="Arquitetura"  style="max-width:90%;">
   <p>Arquitetura genérica da solução</p>
 </div>
@@ -35,7 +35,7 @@ Como resultado, esperamos criar índices e gráficos que suportem soluções de 
   * **Amazon Elasticsearch Service**: cluster gerenciado de Elasticsearch que armazena as informações extraídas e permite a criação de índices e visualizações
   * **Amazon Cognito**: solução para autenticação de usuários que garante acesso ao `Kibana` no cluster do Elasticsearch
 
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/workflow.jpg" alt="Workflow" style="max-width:60%;">
   <p>Representação visual do workflow descrito acima</p>
 </div>
@@ -66,7 +66,7 @@ Acompanhe o deploy inserindo os parâmetros necessários, como nome, zona de exe
 Esta é a primeira parte do projeto. Com essa fase concluída, podemos dar início ao workflow fazendo o upload de arquivos `.mp3` diretamente pelo Console S3 da AWS. Porém, para facilitar o projeto, vamos criar uma interface WEB, garantindo ao usuário a opção de fazer o upload de áudios para seu BucketS3 de forma prática.
 
 Para isso, implementaremos uma forma de fazer um uplaod direto para um BucketS3.
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/s3-2.png" alt="preSignedURL" style="max-width:80%;">
   <p>Arquitetura de envio de arquivos para um BucketS3</p>
 </div>
@@ -86,7 +86,7 @@ sam deploy --guided
 Durante o deploy, preencha os parâmetros que achar necessário ou dê enter para passar por padrão.
 Este deploy leva vários minutos. 
 Ao fim da execução, anote os valores de output, pois você precisará deles em seguida.
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/s3-3.png" alt="OutputValues" style="max-width:80%;">
   <p>Valores apresentados pós deploy</p>
 </div>
@@ -94,7 +94,7 @@ Ao fim da execução, anote os valores de output, pois você precisará deles em
 # Execução
 Com a criação implementada na conta, podemos dar início ao workflow de transcrição. Para isto, basta abrir o arquivo `index.html` contido na pasta `src`.
 
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/webpage.png" alt="Frontend" style="max-width:80%;">
   <p>Frontend da aplicação de envio de áudios</p>
 </div>
@@ -111,7 +111,7 @@ A partir do vídeo transmitido de ao vivo pelo YouTube, foi separado a faixa de 
 
 O resultado pode ser conferido na sequência.
 
-<div style="text-align: center;">
+<div align="center">
   <img src="./src/img/summit.png" alt="North Summit" style="max-width:90%;">
   <p>THE NORTH SUMMIT 2023 ₢ CompassUOL</p>
 </div>
@@ -122,7 +122,7 @@ A indexação é feita manualmente através do Kibana.
 
 Um passo a passo, criado pelo grupo, pode ser conferido [neste PDF](./files/Kibana_tutorial.pdf).
 
-<div style="text-align: center;">
+<div align="center">
   <img src="./files/img/TheNorth_dashboard_print1.png" alt="Dashboard" style="max-width:90%;">
   <p>Dashboard criado no Kibana após criação dos indexes.</p>
 </div>
