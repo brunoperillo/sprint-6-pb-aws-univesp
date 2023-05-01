@@ -2,12 +2,12 @@
 
 Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em machine learning para AWS.
 
-***
-<div align="center"><img src="./src/img/GRUPO_1.png" style="max-width:90%;"></div>
+<div style="text-align: center;">
+  <img src="./src/img/GRUPO_1.png" alt="Grupo 1" style="max-width:90%;">
+</div>
 
-***
 ## Introdução
-***
+
 Em decorrência da pandemia, a geração de conteúdo em áudio e vídeo aumentou de 2021 para cá. O gerenciamento deste material é um desafio, pois questões como indexar, identificar e pesquisar termos específicos são tarefas trabalhosas e demandam tempo e espaço de armazenamento.
 
 Em um ambiente AWS, diferentes serviços podem ser utilizados para faciltar a implementação destas etapas, como o **Amazon Transcribe**. Este é um serviço que realiza a criação de textos a partir de arquivos de áudio que são posteriormente passados para o Amazon Comprehend para análise e identificação de contexto e para o Amazon ElasticSearch para criação e pesquisa de índices.
@@ -15,17 +15,16 @@ Em um ambiente AWS, diferentes serviços podem ser utilizados para faciltar a im
 ***
 
 ## Objetivo
-***
+
 A proposta deste repositório é a criação de uma solução de ingestão e indexação automática de arquivos de áudio se valendo de um workflow de orquestração baseado em AWS Lambda.
 
 A solução segue a ideia de que, a partir do momento em que fazemos o upload de um arquivo `.mp3` para um BucketS3, o workflow se incia e realiza a transcrição e a análise de linguagem.
 Como resultado, esperamos criar índices e gráficos que suportem soluções de pesquisa para facilitar a análise dos dados.
-<div align="center">
+<div style="text-align: center;">
   <img src="./src/img/indexaudios.jpg" alt="Arquitetura"  style="max-width:90%;">
   <p>Arquitetura genérica da solução</p>
 </div>
 
-***
 # Desenvolvimento
 ## Serviços utilizados
   * **Amazon S3**: solução de storage; onde armazenaremos nossos áudios para serem indexados
@@ -36,14 +35,13 @@ Como resultado, esperamos criar índices e gráficos que suportem soluções de 
   * **Amazon Elasticsearch Service**: cluster gerenciado de Elasticsearch que armazena as informações extraídas e permite a criação de índices e visualizações
   * **Amazon Cognito**: solução para autenticação de usuários que garante acesso ao `Kibana` no cluster do Elasticsearch
 
-<div align="center">
+<div style="text-align: center;">
   <img src="./src/img/workflow.jpg" alt="Workflow" style="max-width:60%;">
   <p>Representação visual do workflow descrito acima</p>
 </div>
 
 A descrição de execução de cada uma das funções pode ser conferida [aqui](https://aws.amazon.com/pt/blogs/aws-brasil/indexando-audios-com-amazon-transcribe-amazon-comprehend-e-elasticsearch/)
 
-***
 # Implementando a solução
 
 Como forma de facilitar a replicação, um projeto SAM, ou [AWS Serverless Application Model](https://aws.amazon.com/pt/serverless/sam/), foi implementado e todos os componentes destacados na arquitetura e etapas do workflow podem ser implementados em uma conta AWS utilizando recursos do seguinte repositório oficial da AWS: https://github.com/aws-samples/serverless-audio-indexing.
@@ -68,8 +66,8 @@ Acompanhe o deploy inserindo os parâmetros necessários, como nome, zona de exe
 Esta é a primeira parte do projeto. Com essa fase concluída, podemos dar início ao workflow fazendo o upload de arquivos `.mp3` diretamente pelo Console S3 da AWS. Porém, para facilitar o projeto, vamos criar uma interface WEB, garantindo ao usuário a opção de fazer o upload de áudios para seu BucketS3 de forma prática.
 
 Para isso, implementaremos uma forma de fazer um uplaod direto para um BucketS3.
-<div align="center">
-  <img src="./src/img/s3-2.png" alt="Workflow" style="max-width:80%;">
+<div style="text-align: center;">
+  <img src="./src/img/s3-2.png" alt="preSignedURL" style="max-width:80%;">
   <p>Arquitetura de envio de arquivos para um BucketS3</p>
 </div>
 Resumidamente, precisamos solicitar um URL "assinado", o qual é um processo em duas etapas para o frontend da aplicação:
@@ -88,16 +86,15 @@ sam deploy --guided
 Durante o deploy, preencha os parâmetros que achar necessário ou dê enter para passar por padrão.
 Este deploy leva vários minutos. 
 Ao fim da execução, anote os valores de output, pois você precisará deles em seguida.
-<div align="center">
-  <img src="./src/img/s3-3.png" alt="Workflow" style="max-width:80%;">
+<div style="text-align: center;">
+  <img src="./src/img/s3-3.png" alt="OutputValues" style="max-width:80%;">
   <p>Valores apresentados pós deploy</p>
 </div>
 
-***
 # Execução
 Com a criação implementada na conta, podemos dar início ao workflow de transcrição. Para isto, basta abrir o arquivo `index.html` contido na pasta `src`.
 
-<div align="center">
+<div style="text-align: center;">
   <img src="./src/img/webpage.png" alt="Frontend" style="max-width:80%;">
   <p>Frontend da aplicação de envio de áudios</p>
 </div>
@@ -105,13 +102,58 @@ Com a criação implementada na conta, podemos dar início ao workflow de transc
 A finalidade desta aplciação frontend é de dar mais comodidade ao usuário para fazer o envio de áudios para o BucketS3.
 O usuário acessa a interface, seleciona um arquivo `.mp3` de seu dispositivo e clica em enviar. Com o upload bem-sucedido, assim que o arquivo chega ao bucket, é disparado um gatilho que dá início ao workflow de transcrição, e posterior compreensão.
 
+***
+
+## Conteúdo utilizado para realização do projeto
+O grupo escolheu trabalhar com a transcrição de áudio das palestras ocorridas durante o evento THE NORTH SUMMIT 2023 da empresa CompassUOL.
+
+A partir do vídeo transmitido de ao vivo pelo YouTube, foi separado a faixa de áudio e enviado em formato `.mp3` para o BucketS3 que dá início ao workflow.
+
+O resultado pode ser conferido na sequência.
+
+<div style="text-align: center;">
+  <img src="./src/img/summit.png" alt="North Summit" style="max-width:90%;">
+  <p>THE NORTH SUMMIT 2023 ₢ CompassUOL</p>
+</div>
+
+# Indexação e resultados
+
 A indexação é feita manualmente através do Kibana.
 
+Um passo a passo, criado pelo grupo, pode ser conferido [neste PDF](./files/Kibana_tutorial.pdf).
+
+<div style="text-align: center;">
+  <img src="./files/img/TheNorth_dashboard_print1.png" alt="Dashboard" style="max-width:90%;">
+  <p>Dashboard criado no Kibana após criação dos indexes.</p>
+</div>
+
+Podemos observar duas núvens de palavras, uma contendo as entidades mais presentes e a outra as frases mais faladas durante o evento.
+
+Podemos ainda observar três colunas com Top 10 Pessoas, Entidades e Frases.
+
+**Amy Webb** foi a pessoa mais citada durante o evento, seguida por **Alexis Rockenbach**.
+
+O grupo supôs, anteriormente à análise dos áudios, que o termo **AI** estaria em destaque na nossa nuvem de palavras, o que pode ser confirmado pela tabela Top 10 - Frases, aparecendo em terceiro lugar.
+
+Mais visualizações deste dashboard podem ser conferidas [neste diretório](./files/img/).
+
 # Conclusão
-A realização das atividades da sprint evidenciam a possibilidade de processamento de áudio, sua transformação em texto escrito e análise de elementos constituintes dos discursos dentro da AWS. Os recursos nativos da plataforma “Transcribe” e “Comprehend” permitem a consecução dessas tarefas. Aliado ao recurso nativo do Elastic Search, Kibana, também disponível na AWS, torna-se viável que os dados extraídos dos áudios processados sejam analisados graficamente. Essa possibilidade de análise permite uma variada gama de produtos a serem implementados, como a análise de eventos transmitidos por vídeo. Usou-se nessa sprint o evento “The North”, da Compass UOL, como exemplo. 
+A realização das atividades da sprint evidenciam a possibilidade de processamento de áudio, sua transformação em texto escrito e análise de elementos constituintes dos discursos dentro da AWS. Os recursos nativos da plataforma “Transcribe” e “Comprehend” permitem a consecução dessas tarefas. Aliado ao recurso nativo do Elastic Search, Kibana, também disponível na AWS, torna-se viável que os dados extraídos dos áudios processados sejam analisados graficamente. Essa possibilidade de análise permite uma variada gama de produtos a serem implementados, como a análise de eventos transmitidos por vídeo.
 
-As dificuldades encontradas nessa sprint estiveram relacionadas, sobremaneira, ao uso do Kibana. Devido ao costume dos integrantes do grupo com outras ferramentas de análise e visualização de dados (principalmente PowerBI), o uso do Kibana se mostrou um pouco complicado, e inicialmente confuso. As dificuldades foram vencidas com pesquisa e experimentação. 
+Usou-se neste projeto o áudio do evento “THE NORTH SUMMIT”, da CompassUOL, como exemplo. 
 
-Os próximos passos para esse projeto poderiam ser: 
-  - Unificação dos arquivos .yaml dos dois tutoriais, a qual geraria em um único “build” toda a stack do projeto
-  - Troca de recursos de infraestrutura dentro dos mesmos arquivos .yaml por instâncias mais baratas, com o fim de se evitar desperdícios de recursos com testes
+As dificuldades encontradas nessa sprint estiveram relacionadas, sobremaneira, ao uso do Kibana. Devido ao costume dos integrantes do grupo com outras ferramentas de análise e visualização de dados (principalmente PowerBI), o uso do Kibana se mostrou um pouco complicado, e inicialmente confuso.
+
+As dificuldades foram vencidas com pesquisa e experimentação.
+
+Algumas referências utilizadas para criação deste projeto podems er consultadas nos links:
+
+* [Descoberta e indexação de episódios de podcast usando o Amazon Transcribe e o Amazon Comprehend
+](https://aws.amazon.com/blogs/machine-learning/discovering-and-indexing-podcast-episodes-using-amazon-transcribe-and-amazon-comprehend/)
+
+* [Criação de um índice de pesquisa com tecnologia NLP com o Amazon Textract e o Amazon Comprehend
+](https://aws.amazon.com/blogs/machine-learning/building-an-nlp-powered-search-index-with-amazon-textract-and-amazon-comprehend/)
+
+Os próximos passos para escalar este projeto são: 
+  - Unificação dos arquivos .yaml dos dois tutoriais, a qual geraria em um único “build” toda a stack do projeto.
+  - Troca de recursos de infraestrutura dentro dos mesmos arquivos .yaml por instâncias mais baratas, com o fim de se evitar desperdícios de recursos com testes.
