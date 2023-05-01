@@ -16,6 +16,14 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 ## Descrição do projeto
 
+Para a transcrever um arquivo de áudio, o grupo irá usar o Amazon Transcribe que utiliza três API's
+
+* StartTranscriptionJob - inicia um trabalho em lote para transcrever a fala em um arquivo de áudio para texto. 
+
+* ListTranscriptionJob - retorna uma lista de jobs de transcrição que foram iniciados. 
+
+* GetTranscriptionJob - Retorna o resultado de um trablaho de transcrição. A resposta contém um link para um arquivo JSON contendo os resultados 
+
 ## Objetivo
 
 Desenvolver um sistema para indexação de mensagens de áudio com ferramentas AWS.
