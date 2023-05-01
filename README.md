@@ -49,7 +49,7 @@ A descrição de execução de cada uma das funções pode ser conferida [aqui](
 Como forma de facilitar a replicação, um projeto SAM, ou [AWS Serverless Application Model](https://aws.amazon.com/pt/serverless/sam/), foi implementado e todos os componentes destacados na arquitetura e etapas do workflow podem ser implementados em uma conta AWS utilizando recursos do seguinte repositório oficial da AWS: https://github.com/aws-samples/serverless-audio-indexing.
 
 ## Pré Requisitos:
-Para replçicação deste projeto, certifique-se de ter instalado os seguintes recursos:
+Para replicação deste projeto, certifique-se de ter instalado os seguintes recursos:
 
   - Configure as Credenciais AWS no seu ambiente. Veja: [Configurando credenciais](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
   - Baixe e instale a AWS CLI. Veja: [Instalando AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
@@ -72,9 +72,9 @@ Para isso, implementaremos uma forma de fazer um uplaod direto para um BucketS3.
   <img src="./src/img/s3-2.png" alt="Workflow" style="max-width:80%;">
   <p>Arquitetura de envio de arquivos para um BucketS3</p>
 </div>
-Resumidamente, precisamos solicitar um URL "asinado", o qual é um processo em duas etapas para o frontend da aplicação:
+Resumidamente, precisamos solicitar um URL "assinado", o qual é um processo em duas etapas para o frontend da aplicação:
 
-- Chamamos um API Gateway endpoint, que invoca uma fuinção Lambda chamada getSignedURL, ela retorna um URL assinado pelo BucketS3 que aprova o upload do arquivo
+- Chamamos um API Gateway endpoint, que invoca uma função Lambda chamada getSignedURL, ela retorna um URL assinado pelo BucketS3 que aprova o upload do arquivo
 - Realiza o upload diretamente do frontend para o BucketS3
 
 ## Deploy 2:
@@ -86,7 +86,8 @@ Então execute o comando:
 sam deploy --guided
 ```
 Durante o deploy, preencha os parâmetros que achar necessário ou dê enter para passar por padrão.
-Este deploy leva vários minutos. Ao fim da execução, anote os valores de output, pois você precisará deles em seguida.
+Este deploy leva vários minutos. 
+Ao fim da execução, anote os valores de output, pois você precisará deles em seguida.
 <div align="center">
   <img src="./src/img/s3-3.png" alt="Workflow" style="max-width:80%;">
   <p>Valores apresentados pós deploy</p>
@@ -101,10 +102,16 @@ Com a criação implementada na conta, podemos dar início ao workflow de transc
   <p>Frontend da aplicação de envio de áudios</p>
 </div>
 
-A função desta aplciação frontend é de dar mais comodidade ao usuário para fazer o envio de áudios para o BucketS3.
-O usuário acessa a interface, seleciona um arquivo `.mp3` de seu dispositivo e clica em enviar. Com o upload bem-sucedido, assim que o arquivo chega ao bucket, é disparado um gatilho que dá início ao workflow de transcrição, compreensão.
+A finalidade desta aplciação frontend é de dar mais comodidade ao usuário para fazer o envio de áudios para o BucketS3.
+O usuário acessa a interface, seleciona um arquivo `.mp3` de seu dispositivo e clica em enviar. Com o upload bem-sucedido, assim que o arquivo chega ao bucket, é disparado um gatilho que dá início ao workflow de transcrição, e posterior compreensão.
 
 A indexação é feita manualmente através do Kibana.
 
 # Conclusão
-a fazer
+A realização das atividades da sprint evidenciam a possibilidade de processamento de áudio, sua transformação em texto escrito e análise de elementos constituintes dos discursos dentro da AWS. Os recursos nativos da plataforma “Transcribe” e “Comprehend” permitem a consecução dessas tarefas. Aliado ao recurso nativo do Elastic Search, Kibana, também disponível na AWS, torna-se viável que os dados extraídos dos áudios processados sejam analisados graficamente. Essa possibilidade de análise permite uma variada gama de produtos a serem implementados, como a análise de eventos transmitidos por vídeo. Usou-se nessa sprint o evento “The North”, da Compass UOL, como exemplo. 
+
+As dificuldades encontradas nessa sprint estiveram relacionadas, sobremaneira, ao uso do Kibana. Devido ao costume dos integrantes do grupo com outras ferramentas de análise e visualização de dados (principalmente PowerBI), o uso do Kibana se mostrou um pouco complicado, e inicialmente confuso. As dificuldades foram vencidas com pesquisa e experimentação. 
+
+Os próximos passos para esse projeto poderiam ser: 
+  - Unificação dos arquivos .yaml dos dois tutoriais, a qual geraria em um único “build” toda a stack do projeto
+  - Troca de recursos de infraestrutura dentro dos mesmos arquivos .yaml por instâncias mais baratas, com o fim de se evitar desperdícios de recursos com testes
