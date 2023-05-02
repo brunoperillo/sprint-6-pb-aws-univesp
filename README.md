@@ -15,7 +15,8 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 ## Introdução
 
-O sistema de indexação de mensagens de áudio utiliza as ferramentas de Machine Learnig na AWS para automatização, transcrição, processamento de Linguagem Natural. 
+Na Sprint 6 estudamos sobre as ferramentas de Machine Learnig na AWS no qual pudemos práticar automatização com Python, o processamento de Linguagem Natural e desenvolvimento AWS com o foco em Severless. 
+O desafio nesse projeto é criar um sistema de indexação de mensagens de áudio que utiliza as ferramentas de Machine Learnig na AWS para automatização, transcrição, processamento de Linguagem Natural. 
 
 ## Objetivo
 
@@ -49,6 +50,14 @@ Permitindo que os computadores finalmente nos entendam por meio de nossa forma m
 Os computadores podem detectar padrões em formas de onda de áudio, combiná-los com os sons de um determinado idioma e quais palavras falamos. 
 
 ![Users](https://user-images.githubusercontent.com/117780664/235557543-bc4dc61c-88b8-443b-9743-44e81141d94a.png)
+
+
+*em desenvolvimento*
+
+![Sprint 6 - html - carrega o audio](https://user-images.githubusercontent.com/88354075/235650734-2c54a2af-aaaa-4240-8c39-9da26caaae63.png)
+
+
+[Link do projeto ](http://project-sprint6-group3-site.s3-website-us-east-1.amazonaws.com/)
 
 ## Funcionamento
 
