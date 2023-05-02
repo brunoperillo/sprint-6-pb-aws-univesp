@@ -15,7 +15,7 @@ Avaliação da sexta sprint do programa de bolsas Compass UOL para formação em
 
 ## Introdução
 
-Na Sprint 6 estudamos sobre as ferramentas de Machine Learnig na AWS no qual pudemos práticar automatização com Python, o processamento de Linguagem Natural e desenvolvimento AWS com o foco em Severless. 
+O sistema de indexação de mensagens de áudio utiliza as ferramentas de Machine Learnig na AWS para automatização, transcrição, processamento de Linguagem Natural. 
 
 ## Objetivo
 
@@ -50,7 +50,18 @@ Os computadores podem detectar padrões em formas de onda de áudio, combiná-lo
 
 ![Users](https://user-images.githubusercontent.com/117780664/235557543-bc4dc61c-88b8-443b-9743-44e81141d94a.png)
 
-## Como utilizar o sistema 
+## Funcionamento
+
+1. O usuário acessa a interface online para fazer upload de um arquivo de áudio.
+2. O arquivo de áudio é enviado para o Amazon S3 para armazenamento.
+3. A função Lambda envia o arquivo armazenado no bucket para o Amazon Transcribe.
+4. O Amazon Transcribe faz a transcrição do arquivo de áudio em texto e gera um arquivo do tipo JSON.
+5. O arquivo de texto é enviado para o Amazon Comprehend por meio de uma função Lambda
+6. O Amazon Comprehend analisa o texto e extrai dados de acordo com as configurações.
+7. Os dados extraídos do texto são indexados no Amazon Opensearch.
+8. O usuário realiza pesquisa no sistema com as permissões concedidas pelo Amazon Cognito para acessar o Kibana.
+9. O Kibana trabalha com o Elastic Stack, fornecendo funcionalidades de busca e visualização de dados indexados no Opensearch.
+10. O fluxo de trabalho é definido no Step Function.
 
 
 ## Organização da equipe para o desenvolvimento do projeto. 
