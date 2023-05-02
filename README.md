@@ -40,7 +40,7 @@ A resposta contém um link para um arquivo JSON contendo os resultados.
 Nesse projeto fizemos alguns áudios em mp3 no site [Tree TTS](https://freetts.com/) para testar e criar os arquivos json disponíveis na pasta transcribe.
 ![arquitetura](https://user-images.githubusercontent.com/117780664/235559640-e7446034-2217-445c-bc92-17aa2b346e26.png) 
 
-* O que são ASR's ?
+*O que são ASR's ?*
 
 É o reconhecimento Automático de Voz (Automatic Speech Recognition - ASR) é uma tecnologia que converte palavras faladas em texto. 
 
@@ -49,15 +49,19 @@ Permitindo que os computadores finalmente nos entendam por meio de nossa forma m
 
 Os computadores podem detectar padrões em formas de onda de áudio, combiná-los com os sons de um determinado idioma e quais palavras falamos. 
 
-![Users](https://user-images.githubusercontent.com/117780664/235557543-bc4dc61c-88b8-443b-9743-44e81141d94a.png)
+![Sprint 6 - figura 2](https://user-images.githubusercontent.com/88354075/235663551-1a7f56c9-a00b-4a1e-a9c9-973f8bd1db18.png)
 
+Para esse projeto foi criado o html para testar o carregamento de áudio em bucket do Amazon S3 para compreender melhor o funcionamento do serviço AWS Transcribe, dentro do controle da AWS lembre-se de verificar as políticas de acesso do seu bucket e garantir que esteja configurado corretamente para permitir o acesso ao arquivo de áudio. Na pasta assets, encontra-se um pdf para ajudar nas configurações e esse é o [Link do projeto ](http://project-sprint6-group3-site.s3-website-us-east-1.amazonaws.com/)
 
-*em desenvolvimento*
 
 ![Sprint 6 - html - carrega o audio](https://user-images.githubusercontent.com/88354075/235650734-2c54a2af-aaaa-4240-8c39-9da26caaae63.png)
 
+Utilizamos a ferramenta de visualização e análise de dados [Kibana](https://www.elastic.co/pt/kibana/), permiti explorar, visualizar e analisar dados armazenados em um índice do Elasticsearch, que é um mecanismo de busca distribuído e de análise de dados em tempo real.
 
-[Link do projeto ](http://project-sprint6-group3-site.s3-website-us-east-1.amazonaws.com/)
+Com o Kibana, é possível criar painéis interativos e gráficos que ajudam a entender melhor os dados armazenados no Elasticsearch. Você pode criar visualizações de dados, como gráficos de barras, tabelas e mapas, e usá-las para montar painéis que permitem que você veja como os dados estão mudando ao longo do tempo. 
+Além disso, o Kibana possui recursos avançados de pesquisa, permitindo que você faça consultas complexas para descobrir informações específicas em seus dados.
+
+O Kibana é frequentemente usado em conjunto com o Elasticsearch e o Logstash, como parte da família Elastic Stack (também conhecida como ELK Stack). O Logstash é responsável por coletar, transformar e enriquecer os dados antes de enviá-los para o Elasticsearch, onde são armazenados e indexados. O Kibana, por sua vez, permite que você visualize e analise esses dados de uma maneira fácil e intuitiva. 
 
 ## Funcionamento
 
