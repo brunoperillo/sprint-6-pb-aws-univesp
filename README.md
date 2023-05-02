@@ -24,7 +24,7 @@ Desenvolver um sistema para indexação de mensagens de áudio com ferramentas A
 
 ## Descrição do projeto
 
-Esse projeto tem como referência o tutorial apresentado na [Sprint 6](https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp/tree/main), no qual seguimos os passos para realizar o deploy, adaptar e configurar os serviços*Amazon S3, Lambda, Transcribe, Comprehend, Elasticsearch, Step Function e Cognito.*
+Esse projeto tem como referência o tutorial apresentado na [Sprint 6](https://github.com/Compass-pb-aws-2023-Univesp/sprint-6-pb-aws-univesp/tree/main), no qual seguimos os passos para realizar o deploy, adaptar e configurar os serviços *Amazon S3, Lambda, Transcribe, Comprehend, Elasticsearch, Step Function e Cognito.*
 
 Para transcrever um arquivo de áudio, o grupo irá usar o Amazon Transcribe que utiliza três API's
 
@@ -58,17 +58,12 @@ Os computadores podem detectar padrões em formas de onda de áudio, combiná-lo
 
 ## Organização da equipe para o desenvolvimento do projeto. 
 
-Fizemos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. 
-
+Realizamos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. Utilizamos o [Canva](https://www.canva.com/design/DAFe8qbRW4A/6YS02OsFGlkh2_adYpztPA/edit?utm_content=DAFe8qbRW4A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) para montarmos algumas imagens personalizadas para o projeto. 
+ 
 ## Dificuldades 
 
 No primeiro momento em entende as permissões e politicas dentro dos serviços da AWS. 
 
-
-
-
-
-## Referências
 
 ***
 
