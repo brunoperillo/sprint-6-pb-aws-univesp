@@ -189,7 +189,17 @@ Resources:
         ServerSideEncryptionConfiguration:
           - ServerSideEncryptionByDefault:
               SSEAlgorithm: AES256
-
+      CorsConfiguration:
+        CorsRules:
+        - AllowedHeaders:
+            - "*"
+          AllowedMethods:
+            - GET
+            - PUT
+            - HEAD
+          AllowedOrigins:
+            - "*"
+      
   StartStateMachineFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -477,7 +487,56 @@ Resources:
               Resource:
                 Fn::Sub: "arn:aws:s3:::${AWS::StackName}*"
 
-Outputs:
+# HTTP API - https://github.com/aws-samples/amazon-s3-presigned-urls-aws-sam/blob/master/template.yaml
+  MyApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      # CORS configuration - this is open for development only and should be restricted in prod.
+      # See https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-property-httpapi-httpapicorsconfiguration.html   
+      CorsConfiguration:
+        AllowMethods:
+          - GET
+          - POST
+          - DELETE
+          - OPTIONS
+        AllowHeaders:
+          - "*"   
+        AllowOrigins: 
+          - "*"      
+## Lambda functions
+  UploadRequestFunction:
+    # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Type: AWS::Serverless::Function 
+    Properties:
+      CodeUri: functions/getSignedURL/
+      Handler: app.handler
+      Runtime: nodejs16.x
+      Timeout: 3
+      MemorySize: 128
+      Environment:
+        Variables:
+          UploadBucket: !Ref RawS3Bucket  
+      Policies:
+        - S3WritePolicy:
+            BucketName: !Ref RawS3Bucket
+        ## This permission allows the Lambda function to request signed URLs
+        ## for objects that will be publicly readable. Uncomment if you want this ACL.
+        - Statement:
+           - Effect: Allow
+             Resource: !Sub 'arn:aws:s3:::${RawS3Bucket}/'
+             Action:
+               - s3:putObjectAcl
+      Events:
+        UploadAssetAPI:
+          Type: HttpApi
+          Properties:
+            Path: /uploads
+            Method: get
+            ApiId: !Ref MyApi
+Outputs: # Take a note of the outputs for deploying the workflow templates in this sample application
+  APIendpoint:
+    Description: "HTTP API endpoint URL"
+    Value: !Sub "https://${MyApi}.execute-api.${AWS::Region}.amazonaws.com"
   UserPoolId:
     Value: !Ref UserPool
     Description: "Cognito User pool Id"
