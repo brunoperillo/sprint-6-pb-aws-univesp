@@ -65,7 +65,7 @@ https://aws.amazon.com/pt/blogs/compute/uploading-to-amazon-s3-directly-from-a-w
 https://freetts.com/Home/PortugueseTTS
 
 ## Dificuldades
-Durante o desenvolvimento do projeto, uma das principais dificuldades encontradas foi a configuração adequada do ambiente. Para utilizar as ferramentas AWS, foi necessário criar e configurar corretamente as credenciais e as permissões de acesso. Além disso, a integração das ferramentas Amazon Transcribe, Amazon Comprehend e Elasticsearch exigiu uma configuração cuidadosa e detalhada para garantir o funcionamento correto do sistema. Essa etapa exigiu um esforço significativo para garantir que todas as configurações fossem realizadas corretamente e que o ambiente estivesse funcionando adequadamente.
+Durante o desenvolvimento do projeto, uma das principais dificuldades encontradas foi a configuração adequada do ambiente. Para utilizar as ferramentas AWS, foi necessário criar e configurar corretamente as credenciais e as permissões de acesso.
 
 
 ***
