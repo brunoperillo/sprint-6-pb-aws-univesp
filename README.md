@@ -37,7 +37,6 @@ Para transcrever um arquivo de áudio, o grupo irá usar o Amazon Transcribe que
 A resposta contém um link para um arquivo JSON contendo os resultados. 
 
 Nesse projeto fizemos alguns áudios em mp3 no site [Tree TTS](https://freetts.com/) para testar e criar os arquivos json disponíveis na pasta transcribe.
-
 ![arquitetura](https://user-images.githubusercontent.com/117780664/235559640-e7446034-2217-445c-bc92-17aa2b346e26.png) 
 
 * O que são ASR's ?
@@ -51,26 +50,17 @@ Os computadores podem detectar padrões em formas de onda de áudio, combiná-lo
 
 ![Users](https://user-images.githubusercontent.com/117780664/235557543-bc4dc61c-88b8-443b-9743-44e81141d94a.png)
 
-
-
-
-
-## Funcionalidades
+## Como utilizar o sistema 
 
 
 ## Organização da equipe para o desenvolvimento do projeto. 
 
-Fizemos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. 
+Realizamos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. E na ferramenta [Canva](https://www.canva.com/design/DAFe8qbRW4A/6YS02OsFGlkh2_adYpztPA/edit?utm_content=DAFe8qbRW4A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) trabalhamos com criação de figuras exclusivas para o projeto. 
 
 ## Dificuldades 
 
 No primeiro momento em entende as permissões e politicas dentro dos serviços da AWS. 
 
-
-
-
-
-## Referências
 
 ***
 
