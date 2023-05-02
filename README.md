@@ -38,7 +38,7 @@ A resposta contém um link para um arquivo JSON contendo os resultados.
 
 Nesse projeto fizemos alguns áudios em mp3 no site [Tree TTS](https://freetts.com/) para testar e criar os arquivos json disponíveis na pasta transcribe.
 
-![arquitetura](https://user-images.githubusercontent.com/117780664/235557360-2b150a2c-0a80-4ecd-a43a-1275b799a5ad.png) 
+![arquitetura](https://user-images.githubusercontent.com/117780664/235559640-e7446034-2217-445c-bc92-17aa2b346e26.png) 
 
 * O que são ASR's ?
 
