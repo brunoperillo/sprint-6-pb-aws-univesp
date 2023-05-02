@@ -49,20 +49,27 @@ Permitindo que os computadores finalmente nos entendam por meio de nossa forma m
 
 Os computadores podem detectar padrões em formas de onda de áudio, combiná-los com os sons de um determinado idioma e quais palavras falamos. 
 
-![Sprint 6 - figura 2](https://user-images.githubusercontent.com/88354075/235663551-1a7f56c9-a00b-4a1e-a9c9-973f8bd1db18.png)
 
 Para esse projeto foi criado o html para testar o carregamento de áudio em bucket do Amazon S3 para compreender melhor o funcionamento do serviço AWS Transcribe, dentro do controle da AWS lembre-se de verificar as políticas de acesso do seu bucket e garantir que esteja configurado corretamente para permitir o acesso ao arquivo de áudio. Na pasta assets, encontra-se um pdf para ajudar nas configurações e esse é o [Link do projeto ](http://project-sprint6-group3-site.s3-website-us-east-1.amazonaws.com/)
 
 
 ![Sprint 6 - html - carrega o audio](https://user-images.githubusercontent.com/88354075/235650734-2c54a2af-aaaa-4240-8c39-9da26caaae63.png)
 
+
+
 Utilizamos a ferramenta de visualização e análise de dados [Kibana](https://www.elastic.co/pt/kibana/), permiti explorar, visualizar e analisar dados armazenados em um índice do Elasticsearch, que é um mecanismo de busca distribuído e de análise de dados em tempo real.
 
-Com o Kibana, é possível criar painéis interativos e gráficos que ajudam a entender melhor os dados armazenados no Elasticsearch. Você pode criar visualizações de dados, como gráficos de barras, tabelas e mapas, e usá-las para montar painéis que permitem que você veja como os dados estão mudando ao longo do tempo. 
-Além disso, o Kibana possui recursos avançados de pesquisa, permitindo que você faça consultas complexas para descobrir informações específicas em seus dados.
+Embora o Kibana não seja uma ferramenta de processamento de linguagem natural em si, pode ser usado em conjunto com outras ferramentas de PLN para visualizar e analisar dados textuais. 
+
+Com o Kibana, é possível criar painéis interativos e gráficos que ajudam a entender melhor os dados armazenados no Elasticsearch. 
+
+Você pode criar visualizações de dados, como gráficos de barras, tabelas e mapas, e usá-las para montar painéis que permitem que você veja como os dados estão mudando ao longo do tempo. 
+
+Além disso, o Kibana possui recursos avançados de pesquisa, permitindo que você faça consultas complexas para descobrir informações específicas em seus dados, como identificar padrões de linguagem, categorizar documentos em temas específicos e detectar tópicos emergentes. 
 
 O Kibana é frequentemente usado em conjunto com o Elasticsearch e o Logstash, como parte da família Elastic Stack (também conhecida como ELK Stack). O Logstash é responsável por coletar, transformar e enriquecer os dados antes de enviá-los para o Elasticsearch, onde são armazenados e indexados. O Kibana, por sua vez, permite que você visualize e analise esses dados de uma maneira fácil e intuitiva. 
 
+![Sprint 6 - figura 2](https://user-images.githubusercontent.com/88354075/235663551-1a7f56c9-a00b-4a1e-a9c9-973f8bd1db18.png)
 ## Funcionamento
 
 1. O usuário acessa a interface online para fazer upload de um arquivo de áudio.
