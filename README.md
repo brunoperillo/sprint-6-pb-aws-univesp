@@ -38,7 +38,7 @@ O projeto foi desenvolvido utilizando o ambiente AWS. Os seguintes serviços da 
 ## Como Executar o Projeto
 - Clone o repositório do projeto para o seu computador.
 - Siga o tutorial apresentado em https://aws.amazon.com/pt/blogs/aws-brasil/indexando-audios-com-amazon-transcribe-amazon-comprehend-e-elasticsearch/ para configurar as ferramentas AWS e realizar o deploy da aplicação. Certifique-se de adaptar e atualizar o código conforme necessário.
-- Crie uma interface online ou subir áudio, como apresentado em https://aws.amazon.com/pt/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/. A interface deve permitir que o usuário grave ou faça upload de um arquivo de áudio e envie-o para o Amazon S3.
+- Crie uma interface online ou encaminhe um áudio, como apresentado em https://aws.amazon.com/pt/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/. A interface deve permitir que o usuário grave ou faça upload de um arquivo de áudio e envie-o para o Amazon S3.
 - Configure o Elasticsearch para permitir a indexação dos dados extraídos do texto transcrito pelo Amazon Transcribe e analisados pelo Amazon Comprehend. Certifique-se de criar um índice adequado e mapear os campos relevantes.
 - Acessar o bucket de saída e realizar o download do arquivo JSON com a transcrição.
 
