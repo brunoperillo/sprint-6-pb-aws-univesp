@@ -86,11 +86,13 @@ O Kibana é frequentemente usado em conjunto com o Elasticsearch e o Logstash, c
 
 ## Organização da equipe para o desenvolvimento do projeto. 
 
-Realizamos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e se reunimos no Teams para resolver alguns problemas juntos. E na ferramenta [Canva](https://www.canva.com/design/DAFe8qbRW4A/6YS02OsFGlkh2_adYpztPA/edit?utm_content=DAFe8qbRW4A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) trabalhamos com criação de figuras exclusivas para o projeto. 
+Realizamos reuniões diárias para planejar o desenvolvimento do projeto, organizamos as tarefas através da ferramenta [Trello](https://trello.com/invite/b/HKSC9nI2/ATTIef8afb2120a03fb385e376cc5dfd627c517F9BB6/sprint-06-grupo-3) e nos reunimos no Teams para resolver alguns problemas juntos. E na ferramenta [Canva](https://www.canva.com/design/DAFe8qbRW4A/6YS02OsFGlkh2_adYpztPA/edit?utm_content=DAFe8qbRW4A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) trabalhamos com criação de figuras exclusivas para o projeto. 
 
 ## Dificuldades 
 
 No primeiro momento em entende as permissões e politicas dentro dos serviços da AWS. 
+
+Identificar as regras de permissoes necessarias que não estavam presentes nos tutoriaise (estas regras estao presentes no PDF disponivel na pasta src/assets/role_politicas_aws)
 
 
 ***
