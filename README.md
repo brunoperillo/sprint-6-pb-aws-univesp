@@ -49,6 +49,7 @@ A descrição de execução de cada uma das funções pode ser conferida [aqui](
 Foi implementado um projeto SAM (AWS Serverless Application Model) como forma de facilitar a replicação. Todos os componentes destacados na arquitetura e etapas do workflow podem ser implementados em uma conta AWS, utilizando recursos do [repositório oficial da AWS](https://github.com/aws-samples/serverless-audio-indexing).
 
 ## Pré Requisitos
+
 Para replicação deste projeto, certifique-se de ter instalado os seguintes recursos:
 
 - [x] Configure as Credenciais AWS no seu ambiente. Veja: [Configurando credenciais](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
@@ -58,6 +59,7 @@ Para replicação deste projeto, certifique-se de ter instalado os seguintes rec
 - [x] Baixe e instale o NodeJS. Veja: [Instalando o NodeJS](https://nodejs.org/pt-br/download/package-man)
 
 ## 1º Deploy
+
 Clone [este repositório](https://github.com/aws-samples/serverless-audio-indexing) e navegue até o diretório raiz. 
 
 Na linha de comando do terminal insira o seguinte comando:
@@ -109,8 +111,64 @@ Assim, o usuário acessa a interface, seleciona um arquivo `.mp3` de seu disposi
 
 Com o upload bem-sucedido, o arquivo chega ao bucket e é disparado um gatilho que dá início ao workflow de transcrição, para posterior compreensão.
 
+##  Custos de Infraestrutura
+
+Os recursos gerados pelos dois deploys descritos acima geram os seguintes custos mensais:
+
+### Deploy 1
+| Recurso AWS  | Custo Mês ($) |
+| :--- | ---: |
+| Elastic Search (r5.large.search)  | 137,00  |
+| Bucket S3  | 0,23  |
+| Bucket S3  | 0,23  |
+| Cognito  | 0,50  |
+| IAM  | free tier  |
+| Lambda  | free tier  |
+| Step Functions  | free tier  |
+
+### Deploy 2
+| Recurso AWS  | Custo Mês ($) |
+| :--- | ---: |
+| Elastic Search (r5.large.search) | 137,00  |
+| Bucket S3  | 0,23  |
+| Cognito  | 0,50  |
+| IAM  | free tier  |
+| Lambda  | free tier  |
+| API Endpoint  | free tier  |
+
+#### Total : $ 275,69
+
+Já se os recursos dos projetos fossem alterados, substituindo-se por elementos com capacidade reduzida de processamento, os seguintes custos seriam alcançados:
+
+### Deploy 1
+| Recurso AWS  | Custo Mês ($) |
+| :--- | ---: |
+| Elastic Search (t2.micro.search) | 14,36  |
+| Bucket S3  | 0,23  |
+| Bucket S3  | 0,23  |
+| Cognito  | 0,50  |
+| IAM  | free tier  |
+| Lambda  | free tier  |
+| Step Functions  | free tier  |
+
+### Deploy 2
+| Recurso AWS  | Custo Mês ($) |
+| :--- | ---: |
+| Elastic Search  (t2.micro.search) | 14,36  |
+| Bucket S3  | 0,23  |
+| Cognito  | 0,50  |
+| IAM  | free tier  |
+| Lambda  | free tier  |
+| API Endpoint  | free tier  |
+
+#### Total : $ 30,41
+
+Percebe-se que há uma redução de gastos de aproximadamente 90% com a alteração. Essa mudança poderia ser um próximo passo para o projeto, a depender dos requerimentos de implementação.
+
+*Observação: a única diferença nos cenários calculados estão nas instâncias do Elastic Search. Para os demais recursos, foram considerados cenários de uso não intensivos (poucos acessos e armazenamento pequeno).*
 
 ## Testes
+
 O grupo escolheu trabalhar com a transcrição de áudio do evento anual The North Summit, realizado pela Compass UOL em 25/04/2023.
 
 <div align="center">
@@ -119,6 +177,7 @@ O grupo escolheu trabalhar com a transcrição de áudio do evento anual The Nor
 </div>
 
 A partir do vídeo transmitido ao vivo pelo YouTube, foi separado a faixa de áudio e enviado em formato `.mp3` para o Bucket S3 que dá início ao workflow. O resultado pode ser conferido na sequência.
+
 ## Resultados
 
 A indexação é feita manualmente através do Kibana.
@@ -130,7 +189,7 @@ Um passo a passo, criado pelo grupo, pode ser conferido [neste PDF](./files/Kiba
   <sub><i><p>Dashboard criado no Kibana após criação dos indexes</p></i></sub>
 </div>
 
-É possível observar duas núvens de palavras: uma contendo as entidades mais presentes e a outra as palavras-chave mais faladas durante o evento.
+É possível observar duas nuvens de palavras: uma contendo as entidades mais presentes e a outra as palavras-chave mais faladas durante o evento.
 
 Considerando os resultados obtidos após processamento dos áudios do evento, 
 
@@ -143,6 +202,7 @@ Considerando os resultados obtidos após processamento dos áudios do evento,
 Mais visualizações deste dashboard podem ser conferidas [neste diretório](./files/img/).
 
 ## Conclusão
+
 A realização das atividades da sprint evidenciam a possibilidade de processamento de áudio, sua transformação em texto escrito e análise de elementos constituintes dos discursos dentro da AWS. 
 
 Os recursos nativos da plataforma “Transcribe” e “Comprehend” permitem a consecução dessas tarefas. Aliado ao recurso nativo do Elastic Search, Kibana, também disponível na AWS, torna-se viável que os dados extraídos dos áudios processados sejam analisados graficamente. Essa possibilidade de análise permite uma variada gama de produtos a serem implementados, como a análise de eventos transmitidos por vídeo.
@@ -156,7 +216,6 @@ Os próximos passos para escalar este projeto são:
 Devido ao costume com outras ferramentas de análise e visualização de dados (principalmente PowerBI), o uso do Kibana se mostrou um pouco complicado e inicialmente confuso. As dificuldades foram vencidas com pesquisa e experimentação.
 
 ## Referências
-
 
 * [Descoberta e indexação de episódios de podcast usando o Amazon Transcribe e o Amazon Comprehend
 ](https://aws.amazon.com/blogs/machine-learning/discovering-and-indexing-podcast-episodes-using-amazon-transcribe-and-amazon-comprehend/)
