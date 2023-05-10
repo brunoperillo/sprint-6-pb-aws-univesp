@@ -1,10 +1,5 @@
 # Avaliação Sprint 6 - Programa de Bolsas Compass UOL / AWS e Univesp
 
-
-<div align="center">
-  <img src="./src/img/GRUPO_1.png" alt="Grupo 1" style="max-width:90%;">
-</div>
-
 ## Introdução
 
 Em decorrência da pandemia de COVID-19, a geração de conteúdos em áudio e vídeo aumentou significativamente de 2021 para cá. Além das dificuldades conhecidas em relação ao armazenamento de quantidade massivas de dados, seu gerenciamento também é um desafio. O processamento de textos, áudio e videos envolve etapas como transcrição, indexação, identificação e pesquisa de termos específicos, gerando uma importante padronização na análise do material.
@@ -95,7 +90,10 @@ Para o *front-end* da aplicação será necessário solicitar um URL "assinado",
 ## 2º Deploy
 
 Clone [este segundo repositório](https://github.com/aws-samples/amazon-s3-presigned-urls-aws-sam). Atualize o arquivo `template.yaml` nas linhas 35 e 38 para referenciar ao seu *BucketS3* da entrada de arquivos .mp3 que inicializarão o *workflow* implementado. Por padrão, será a opção que contenha **RawS3Bucket** no nome.
-Então execute o comando:
+
+Adicionalmente, será preciso alterar o arquivo `app.js` contido na pasta `getSignedURL` para que seja solicitado um URL para envio de áudio. Na linha 32, modifique a extensão de `.jpg` para `.mp3`. Agora na linha 39, defina o ContentType para `audio/mpeg`.
+
+Após estes passos, o projeto está pronto para ser implementado. Abra o terminal no diretório clonado e execute o comando:
 ```
 sam deploy --guided
 ```
@@ -109,7 +107,12 @@ Este deploy leva vários minutos e, ao fim da execução, salve o valor de outpu
 
 ## Execução
 
-Com a toda a arquitetura implementada na conta, podemos dar início ao *workflow* de transcrição. Para isto, basta abrir o arquivo `index.html` contido na pasta `src`.
+
+Esta interface _web_ proporcionará ao usuário o envio de arquivos de forma prática, sem precisar estar autenticado no console da AWS. Para isto funcione, é necessário alterar o link do _API_ENDPOINT_ no script da interface. Na linha 62, altere o link do _API_ENDPOINT_ gerado no segundo deploy para que o envio seja feito para o seu BucketS3.
+
+Envie este arquivo `index.html` para um BucketS3 e torne-o público para que fique disponível online. Configure [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) no BucketS3 que contenha `RawS3` no nome para que o envio de arquivos externos seja possível.
+
+Com a toda a arquitetura implementada na conta, podemos dar início ao *workflow* de transcrição. Para isto, o link do seu BucketS3 que aponta para o `index.html`.
 
 <div align="center">
   <img src="./src/img/webpage.png" alt="Frontend" style="max-width:80%;">
@@ -240,9 +243,21 @@ Devido ao costume com outras ferramentas de análise e visualização de dados (
 
 ## Referências
 
-* [Descoberta e indexação de episódios de podcast usando o Amazon Transcribe e o Amazon Comprehend
-](https://aws.amazon.com/blogs/machine-learning/discovering-and-indexing-podcast-episodes-using-amazon-transcribe-and-amazon-comprehend/)
+* [Descoberta e indexação de episódios de podcast usando o Amazon Transcribe e o Amazon Comprehend](https://aws.amazon.com/blogs/machine-learning/discovering-and-indexing-podcast-episodes-using-amazon-transcribe-and-amazon-comprehend/)
 
-* [Criação de um índice de pesquisa com tecnologia NLP com o Amazon Textract e o Amazon Comprehend
-](https://aws.amazon.com/blogs/machine-learning/building-an-nlp-powered-search-index-with-amazon-textract-and-amazon-comprehend/)
+* [Criação de um índice de pesquisa com tecnologia NLP com o Amazon Textract e o Amazon Comprehend](https://aws.amazon.com/blogs/machine-learning/building-an-nlp-powered-search-index-with-amazon-textract-and-amazon-comprehend/)
 
+* [Indexando áudios com Amazon Transcribe, Amazon Comprehend e ElasticSearch](https://aws.amazon.com/pt/blogs/aws-brasil/indexando-audios-com-amazon-transcribe-amazon-comprehend-e-elasticsearch/)
+
+* [Uploading to Amazon S3 directly from a web or mobile application](https://aws.amazon.com/pt/blogs/compute/uploading-to-amazon-s3-directly-from-a-web-or-mobile-application/)
+
+***
+
+<div align="center" style="padding: 20px">
+  <img src="./src/img/GRUPO_1.png" alt="Grupo 1" style="max-width:90%;">
+  <sub>
+    <i>
+      <p style="padding: 10px">Desenvolvedores deste projeto</p>
+    </i>
+  </sub>
+</div>
